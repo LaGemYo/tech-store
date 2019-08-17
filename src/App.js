@@ -18,7 +18,7 @@ import Sidecart from './components/Sidecart';
 import Footer from './components/Footer';
 
 class App extends Component {
-  render() {
+    render() {
     return (
       <>
         {/*navbar, sidebar, cart, footer */}
