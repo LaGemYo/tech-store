@@ -20,7 +20,7 @@ export default function Product({product}) {
                                  className="card-img-top p-5"
                                  style={{height:"300px"}}
                                  />
-                                 <div className="product-icon">
+                                 <div className="product-icons">
                                      <Link 
                                      to={`/products/${product.id}`} 
                                      onClick={() => {setSingleProduct(product.id)}}
@@ -72,7 +72,7 @@ const ProductWrapper = Styled.div`
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
-        /*opacity: 0; */
+
     }
     .icon{
         font-size: 2.5rem;
