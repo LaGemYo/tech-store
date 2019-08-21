@@ -81,7 +81,8 @@ class ProductProvider extends Component {
       this.setState({
           cartItems: totals.cartItems,
           cartSubTotal: totals.subTotal,
-          cartTax: totals.total,
+          cartTax: totals.tax,
+          cartTotal: totals.total,
       })
   };
   // sync storage
@@ -123,9 +124,10 @@ class ProductProvider extends Component {
   handleSidebar = () => {
     this.setState({ sidebarOpen: !this.state.sidebarOpen });
   };
-  // hanldle sart
+  // hanldle cart
   handleCart = () => {
-    this.setState({ cartOpen: !this.state.sidebarOpen });
+    this.setState({ cartOpen: !this.state.cartOpen});
+    console.log(this.state.cartTotal)
   };
   //close cart
   closeCart = () => {
