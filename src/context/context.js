@@ -45,7 +45,7 @@ class ProductProvider extends Component {
       cart: this.getStorageCart(),
       singleProduct: this.getStorageProduct(),
       loading: false
-    });
+    }, () => (this.addTotals));
   };
   // get cart from local storage
   getStorageCart = () => {
@@ -76,7 +76,14 @@ class ProductProvider extends Component {
       };
   };
   //add totals
-  addTotals = () => {};
+  addTotals = () => {
+      const totals = this.getTotals();
+      this.setState({
+          cartItems: totals.cartItems,
+          cartSubTotal: totals.subTotal,
+          cartTax: totals.total,
+      })
+  };
   // sync storage
   syncStorage = () => {};
   //add to cart
