@@ -129,7 +129,7 @@ class ProductProvider extends Component {
     this.setState({ cartOpen: !this.state.cartOpen});
     console.log(this.state.cartTotal)
   };
-  //close cart
+  // close cart
   closeCart = () => {
     this.setState({ cartOpen: false });
   };
@@ -137,6 +137,26 @@ class ProductProvider extends Component {
   openCart = () => {
     this.setState({ cartOpen: true });
   };
+
+  // cart functionality
+  // increment
+  increment = (id) => {
+    console.log(id);
+  };
+  // decrement
+  decrement = (id) => {
+    console.log(id);
+  };
+  // removeItem
+  removeItem = (id) => {
+    console.log(id);
+  }
+  // clear cart
+  clearCart = () => {
+    console.log("you cleared the cart")
+  };
+
+
   render() {
     return (
       <ProductContext.Provider
@@ -147,7 +167,11 @@ class ProductProvider extends Component {
           closeCart: this.closeCart,
           openCart: this.openCart,
           addToCart: this.addToCart,
-          setSingleProduct: this.setSingleProduct
+          setSingleProduct: this.setSingleProduct,
+          increment: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart,
         }}
       >
         {this.props.children}
