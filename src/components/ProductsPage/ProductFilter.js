@@ -62,7 +62,8 @@ export default function ProductFilter() {
               </select>
             </div>
             {/* end of category search */}
-            {/* price range */}            
+            {/* price range */}          
+            <div>
               <label htmlFor="price">
                 <p className="mb-2">
                   product price : 
@@ -79,6 +80,7 @@ export default function ProductFilter() {
               value={price}
               onChange={handleChange}
               />
+            </div>  
             {/* end of price range */}
             {/* free shipping */}
             <div>
@@ -107,14 +109,14 @@ export default function ProductFilter() {
 
 const FilterWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat()(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
   label {
     font-weight: bold;
     text-transform: capitalize;
   }
-  .filter-align-items, 
+  .filter-item,
   .filter-price {
     display: block;
     width: 100%;
