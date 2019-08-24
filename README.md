@@ -8,10 +8,10 @@ It is responsive and mobile first.
   
 ## Used:
 
-* HTML, SASS, REACT.JS
+* HTML, REACT.JS
+* Styled Components
 * Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 * Bootstrap
-* Styled Components
 * React-Context
 * React-Icons
 *  [Contentful ](https://www.contentful.com/) => images
