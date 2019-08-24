@@ -48,6 +48,7 @@ export default function ProductFilter() {
               id="company" 
               className="filter-item" 
               value={company}
+              onChange={handleChange}
               >
                 {
                   companies.map((company, index) => {

@@ -209,12 +209,26 @@ class ProductProvider extends Component {
     })
   };
 // handle filtering
-handleChange = (e) => {
-  console.log(e);
+handleChange = (event) => {
+  const name = event.target.name;
+  const value = event.target.type === "checkbox" ? event.target.checked : event.target.value; 
+  this.setState({
+    [name]: value,
+  },
+  this.sortData
+  );
 };
-sortData = () => {
 
-}
+sortData = () => {
+  const {storeProducts, price, company, shipping, search} = this.state;
+  let tempProducts = [...storeProducts];
+  if(company != "all") {
+    tempProducts = tempProducts.filter(item => item.company === company);
+  }
+  this.setState({
+    filteredProducts: tempProducts
+  }) 
+};
 
   render() {
     return (
