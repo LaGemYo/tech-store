@@ -26,7 +26,10 @@ export default function Products() {
               </div>
               {/* products */}
               <div className="row py-5">
-                {filteredProducts.map(product => {
+                {filteredProducts.length === 0 ? (
+                  <div className="col text-title text-center">sorry, no items matched your search</div>
+                ) :
+                  filteredProducts.map(product => {
                   return <Product key={product.id} product={product} />;
                 })}
               </div>

@@ -4,8 +4,8 @@ import { socialData } from "./socialData";
 import { items } from "./productData";
 
 const ProductContext = React.createContext();
-//Provider
-//Consumer
+// Provider
+// Consumer
 class ProductProvider extends Component {
   state = {
     sidebarOpen: false,
@@ -30,11 +30,11 @@ class ProductProvider extends Component {
     shipping: false,
   };
   componentDidMount() {
-    //from contentful items
+    // from contentful items
     this.setProducts(items);
   }
 
-  //set products
+  // set products
   setProducts = products => {
     let storeProducts = products.map(item => {
       const { id } = item.sys;
@@ -45,7 +45,7 @@ class ProductProvider extends Component {
     //  featured products
     let featuredProducts = storeProducts.filter(item => item.featured === true);
     // get max price
-let maxPrice = Math.max(...storeProducts.map(item => item.price));
+    let maxPrice = Math.max(...storeProducts.map(item => item.price));
 
     this.setState({
       storeProducts,
@@ -86,7 +86,7 @@ let maxPrice = Math.max(...storeProducts.map(item => item.price));
       total,
     };
   };
-  //add totals
+  // add totals
   addTotals = () => {
     const totals = this.getTotals();
     this.setState({
@@ -98,7 +98,7 @@ let maxPrice = Math.max(...storeProducts.map(item => item.price));
   };
   // sync storage
   syncStorage = () => { };
-  //add to cart
+  // add to cart
   addToCart = id => {
     let tempCart = [...this.state.cart];
     let tempProducts = [...this.state.storeProducts];
