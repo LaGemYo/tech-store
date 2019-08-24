@@ -138,7 +138,6 @@ class ProductProvider extends Component {
   // hanldle cart
   handleCart = () => {
     this.setState({ cartOpen: !this.state.cartOpen });
-    console.log(this.state.cartTotal)
   };
   // close cart
   closeCart = () => {
