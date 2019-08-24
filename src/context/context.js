@@ -221,8 +221,12 @@ handleChange = (event) => {
 
 sortData = () => {
   const {storeProducts, price, company, shipping, search} = this.state;
+  let tempPrice = parseInt(price);
   let tempProducts = [...storeProducts];
-  if(company != "all") {
+  // filtering based on price
+  tempProducts = tempProducts.filter(item => item.price <= tempPrice);
+  // filtering based on company
+  if(company !== "all") {
     tempProducts = tempProducts.filter(item => item.company === company);
   }
   this.setState({
