@@ -14,7 +14,6 @@ It is responsive and mobile first.
 * Bootstrap
 * React-Context
 * React-Icons
-*  [Contentful ](https://www.contentful.com/)
 * [https://www.cssmatic.com/](https://www.cssmatic.com/) => shadows
 
 *  [Netlify ](https://www.netlify.com/) => deployment
